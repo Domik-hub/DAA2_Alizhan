@@ -1,6 +1,4 @@
 # DAA Assignment 2
-Alizhan Alikhanov
-#Group: SE-2523
 
 ## Project Structure
 
