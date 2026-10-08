@@ -1,38 +1,30 @@
 # DAA Assignment 2
 
-## Project Structure
+Alizhan Alikhanov 
 
-DAA_Assignment2/
-├── pom.xml
-├── README.md
-├── REPORT.md
-├── src/
-│   ├── main/
-│   │   └── java/
-│   │       ├── DynamicArray.java
-│   │       ├── MyLinkedList.java
-│   │       ├── MinHeap.java
-│   │       └── Benchmark.java
-│   └── test/
-│       └── java/
-│           └── DataStructuresTest.java
-└── results/
-    ├── results.csv
-    └── generate_plots.py
+## Overview
+This project implements fundamental data structures from scratch (without using built-in Java collections), collects low-level performance metrics (`steps`, `moves`, `comparisons`, `time_ms`), and provides a comprehensive comparative analysis of their efficiency and Big-O complexity.
+
+## Project Structure
+* `pom.xml` - Maven configuration file
+* `src/main/java/DynamicArray.java` - Dynamic array implementation with automatic capacity doubling
+* `src/main/java/MyLinkedList.java` - Doubly linked list implementation with optimized bidirectional traversal
+* `src/main/java/MinHeap.java` - Minimum heap implementation based on an array
+* `src/main/java/Benchmark.java` - Performance benchmarking script and metrics exporter
+* `src/test/java/DataStructuresTest.java` - JUnit 5 unit tests for correctness verification
+* `results/results.csv` - Collected raw benchmark data
+
+---
 
 ## Prerequisites
-* Java Development Kit (JDK) version 17 or higher.
-* Apache Maven for build automation and dependency management.
-* Python 3 with pandas and matplotlib libraries installed (for plot generation).
+* Java Development Kit (JDK) 17 or higher
+* Apache Maven
 
 ---
 
 ## Build and Execution Guide
 
 ### 1. Run Unit Tests (JUnit 5)
-To verify correctness across all data structures, run:
+To verify correctness and test all edge cases across data structures, run:
+```bash
 mvn clean test
-
-### 2. Run Benchmark & Generate Data
-To execute workload simulations and create results.csv, run:
-mvn compile exec:java -Dexec.mainClass="Benchmark"
